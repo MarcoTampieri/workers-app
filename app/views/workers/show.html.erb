@@ -1,0 +1,7 @@
+<h3><%= @worker.name %></h3>
+<p>Company: <%= @worker.company %></p>
+<p>Position: <%= @worker.position %></p>
+</br>
+<%= link_to 'Remove', @worker, method: :delete, data: {confirm: 'Are you sure?'} %><br>
+<%= link_to 'Update worker?', :action => :edit, :id => @worker.id %><br>
+<%= link_to 'Back to the workers', :action => :index %>

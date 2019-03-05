@@ -1,0 +1,8 @@
+<h4>Add an additional worker</h4>
+<%= form_with model: @worker do |form| %>
+    <%= form.text_field :name, placeholder: 'name' %>
+    <%= form.text_field :company, placeholder: 'company' %>
+    <%= form.text_field :position, placeholder: 'position' %>
+
+    <%= form.submit %>
+<% end %>

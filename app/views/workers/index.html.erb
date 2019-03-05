@@ -1,0 +1,11 @@
+<h3>Here be workers</h3>
+<table>
+  <% @workers.each do |worker| %>
+    <tr>
+      <td><%= link_to worker.name, worker_path(worker) %></td>
+      <td><%= button_to 'Change info', edit_worker_path(worker), method: 'get'%></td>
+      <td><%= button_to 'Remove', worker_path(worker), method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</table></br>
+<%= link_to "Add a New worker", new_worker_path %>
+
